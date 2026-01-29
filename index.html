@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #050505;
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Nền hiệu ứng mờ */
+        .background-glow {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: rgba(99, 102, 241, 0.15);
+            filter: blur(120px);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: linear-gradient(to right, #ffffff, #6366f1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        .btn-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            max-width: 350px;
+        }
+
+        .btn {
+            position: relative;
+            padding: 18px 40px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: white;
+            background: #111;
+            border: 1px solid #333;
+            border-radius: 12px;
+            transition: all 0.4s ease;
+            display: block;
+            overflow: hidden;
+        }
+
+        .btn-discord:hover {
+            border-color: #5865F2;
+            box-shadow: 0 0 20px rgba(88, 101, 242, 0.4);
+            transform: translateY(-3px);
+        }
+
+        .btn-client:hover {
+            border-color: #00ff88;
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+            transform: translateY(-3px);
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 0.8rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-glow"></div>
+
+    <div class="container">
+        <h1>White <span style="color: #6366f1;">Hub</span></h1>
+        
+        <div class="btn-wrapper">
+            <a href="https://discord.gg/rv75cPgr9" target="_blank" class="btn btn-discord">
+                Discord Group
+            </a>
+
+            <a href="https://docs.google.com/document/d/1dhhHmOT6tmCW86LhCnno8mWeXYbxyj82-4TeyAvH3-E/edit?usp=drivesdk" target="_blank" class="btn btn-client">
+                Client 704 Mới Nhất
+            </a>
+        </div>
+
+        <footer>© 2026 White Community</footer>
+    </div>
+</body>
+</html>
